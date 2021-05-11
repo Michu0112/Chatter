@@ -64,3 +64,14 @@ node_modules/
 
 # dotenv environment variables file
 .env
+
+.firebaserc
+
+database.rules.js
+
+firebase.json
+
+package-lock.json
+package.json
+webpack.config.js
+firebase-hosting-pull-request.yml
