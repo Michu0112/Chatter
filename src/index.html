@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
     <script>
     var firebaseConfig = {
         apiKey: "AIzaSyB6T3d28_A-NmnlbxpgKFZATkCnzOzuLi0",
@@ -18,25 +18,14 @@
         measurementId: "G-D43MG5T3PB"
     };
     firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
     </script>
-    <script src="scripts/Chatter.js" defer></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.min.css">
-    <title>Chatter!</title>
+
+    <title>Document</title>
 </head>
 <body>
 
-    <h1>Welcome to chatter!</h1>
     
-    <section id="whenSignedIn" hidden="true">
-        <button id="signOutBtn" class="btn btn-primary">Sign out</button>
-        <div class="userDetails"></div>
-    </section>
-
-    <section id="whenSignedOut" >
-        <button id="signInBtn" class="btn btn-primary">Sign in with Google</button>
-    </section>
-
+    
 </body>
 </html>
