@@ -98,16 +98,25 @@
   border-radius: .2rem;
   padding: .3rem;
   margin: .8rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content__box__chat__list__li__wrapper {
+  display: flex;
 }
 
 .content__box__chat__list__author {
-  font-weight: 500;
+  font-weight: 600;
   color: #201e1f;
+  margin-right: 5px;
 }
 
 .content__box__chat__list__respond {
-  font-weight: 500;
+  font-weight: 600;
   color: #ff4000;
+  margin-right: 5px;
 }
 
 .content__box__inputBox {
