@@ -4,12 +4,13 @@ const CleanPlugin = require('clean-webpack-plugin');
 module.exports = {
   mode: 'production',
   entry: {
-    'share-place': './src/index.js',
+    'Chatter': './src/scripts/index.js',
+    'sendMessage': '/src/scripts/sendMessage.js'
   },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist', 'scripts'),
-    publicPath: 'dist/assets/scripts/'
+    publicPath: 'dist/scripts/'
   },
   devtool: 'cheap-source-map',
   module: {
@@ -23,7 +24,6 @@ module.exports = {
             presets: [
               [
                 '@babel/preset-env',
-                { useBuiltIns: 'usage', corejs: { version: 3 } }
               ]
             ]
           }

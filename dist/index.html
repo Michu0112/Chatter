@@ -8,18 +8,18 @@
     <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
     <script>
-    var firebaseConfig = {
-        apiKey: "AIzaSyB6T3d28_A-NmnlbxpgKFZATkCnzOzuLi0",
-        authDomain: "chatter-754a3.firebaseapp.com",
-        projectId: "chatter-754a3",
-        storageBucket: "chatter-754a3.appspot.com",
-        messagingSenderId: "64820258636",
-        appId: "1:64820258636:web:916866a44b9908bb7991e9",
-        measurementId: "G-D43MG5T3PB"
+    const firebaseConfig = {
+    apiKey: "AIzaSyB9R3usZkwIm4zNSrNm8zaFMG786v4tMsE",
+    authDomain: "chatter-488ac.firebaseapp.com",
+    projectId: "chatter-488ac",
+    storageBucket: "chatter-488ac.appspot.com",
+    messagingSenderId: "591433352153",
+    appId: "1:591433352153:web:725f948c3a22616c1a8fc8"
     };
     firebase.initializeApp(firebaseConfig);
     </script>
-    <script src="scripts/Chatter.js" defer></script>
+    <script src="https://kit.fontawesome.com/91dbe1e527.js" crossorigin="anonymous"></script>
+    <script src="scripts/Chatter.js" defer type="module"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.min.css">
@@ -27,16 +27,54 @@
 </head>
 <body>
 
-    <h1>Welcome to chatter!</h1>
+    <h1 class="welcome__text">Welcome to <span class="welcome__text__span">chatter</span>!</h1>
     
-    <section id="whenSignedIn" hidden="true">
-        <button id="signOutBtn" class="btn btn-primary">Sign out</button>
-        <div class="userDetails"></div>
-    </section>
+    <div class="content" hidden="true">
+        <button id="signOutBtn" class="btn btn-primary">Sign Out</button>
+        <div class="content__box">
+                <form class="content__box__form">
+                    <div class="content__box__chat">
+                        <ul class="content__box__chat__list">
+                            <li class="content__box__chat__list__li"><span class="content__box__chat__list__respond">Chatter: </span>dummy text</li>
+                            <li class="content__box__chat__list__li"><span class="content__box__chat__list__author">You: </span>dummy text2</li>
+                        </ul>
+                    </div>
+                    <div class="content__box__inputBox">
+                        <input type="text" autocomplete="off" placeholder="Hey..." spellcheck="false" class="content__box__inputBox__input">
+                        <input type="submit" hidden>
+                    </div>
+                </form>
+        </div>
+        <div class="content__userInfo">
 
-    <section id="whenSignedOut" >
-        <button id="signInBtn" class="btn btn-primary">Sign in with Google</button>
-    </section>
+            <img class="content__userInfo__img" src="images/user.jpg" alt="profile-img">
+
+            <div class="content__userInfo_wrapper">
+                <p class="content__userInfo__p name"></p>
+                <p class="content__userInfo__p uid"></p>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="login__panel">
+        <div class="login__panel__innerBox">
+
+            <label class="login__panel__innerBox__label">Login</label>
+                <input type="text" class="login__panel__innerBox__input username">
+            <label class="login__panel__innerBox__label">Password</label>
+                <input type="password" class="login__panel__innerBox__input password">
+            <input type="submit" class="login__panel__innerBox__input submit" value="Log in">
+
+                <p class="login__panel__innerBox__p">Sign in with</p>
+
+            <div class="login__panel__innerBox__btn__wrapper">
+                <button id="signInBtnFacebook" class="btn btn-primary"><i class="fab fa-facebook-f"></i></button>
+                <button id="signInBtnGoogle" class="btn btn-primary"><i class="fab fa-google"></i> </button>
+            </div>
+
+        </div>
+    </div>
 
 </body>
 </html>

@@ -1,0 +1,16 @@
+@mixin flex-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin transition-all {
+    transition: .3s ease-in-out;
+}
+$primary-color: #ff4000;
+$secondary-color: #201e1f; 
+$third-color: #faaa8d;
+$font-color: #feefdd;
+@mixin resetInput {
+    border: none;
+    outline: none;
+}

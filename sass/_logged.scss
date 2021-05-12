@@ -1,0 +1,101 @@
+@import './variables';
+
+.content{
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    @include flex-centered;
+    justify-content: space-around;
+
+    #signOutBtn{
+        position: absolute;
+        left: 2rem;
+        top: 2rem;
+    }
+
+    &__box{
+        @include flex-centered;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        margin: 3rem;
+
+        &__form{
+            min-height: 500px;
+            width: 100%;
+        }
+
+        &__chat{
+            background-color: wheat;
+            width: 100%;
+            min-height: 500px;
+            padding: 1rem;
+            border: 2px solid $primary-color;
+
+            &__list{
+                list-style: none;
+                padding: 1rem;
+
+                &__li{
+                    background-color: $font-color;
+                    border-radius: .2rem;
+                    padding: .3rem;
+                    margin: .8rem 0;
+                }
+
+                &__author{
+                    font-weight: 500;
+                    color: $secondary-color;
+                }
+
+                &__respond{
+                    font-weight: 500;
+                    color: $primary-color;
+                }
+            }
+        }
+
+        &__inputBox{
+            width: 100%;
+            height: 2rem;
+
+            &__input{
+                height: 100%;
+                width: 100%;
+                margin-top: 2rem;
+                padding: 2rem;
+                color: $font-color;
+                background-color: $secondary-color;
+                @include resetInput;
+                border: 2px solid $primary-color;
+            }
+        }
+    }
+
+    &__userInfo{
+        height: 100%;
+        width: 100%;
+        margin: 3rem;
+        @include flex-centered;
+        flex-direction: column;
+
+        &__img{
+            width: 200px;
+            border-radius: 100px;
+            border: 5px solid $primary-color;
+        }
+
+        &__p{
+            color: $font-color;
+            font-size: 2rem;
+        }
+
+        .name{
+            color: $primary-color;
+        }
+
+        .uid{
+            font-size: .9rem;
+        }
+    }
+}

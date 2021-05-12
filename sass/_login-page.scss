@@ -1,0 +1,48 @@
+@import './variables';
+
+
+.login__panel{
+
+    @include flex-centered;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(
+        to right,
+        transparent ,
+        rgba( $primary-color, .6) ,
+        transparent ,
+    );
+
+    &__innerBox{
+        @include flex-centered;
+        flex-direction: column;
+
+        &__btn__wrapper{
+            flex-direction: row;
+            margin: 1rem 0 2rem 0;
+
+            .btn-primary{
+                width: 2.5rem;
+                height: 2.5rem;
+                @include transition-all;
+
+                &:hover{
+                    background-color: orangered;
+                    border: 1px solid orangered;
+                }
+            }
+        }
+
+        &__input{
+            margin: 1rem;
+            background-color: $secondary-color;
+            padding: .4rem;
+            color: $font-color;
+            @include resetInput;
+        }
+
+        &__label{
+            font-weight: bold;
+        }
+    }
+}

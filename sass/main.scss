@@ -1,0 +1,24 @@
+@import './reset';
+@import './login-page';
+@import './variables';
+@import './logged';
+
+body{
+    background-color: $secondary-color;
+}
+
+.welcome__text{
+    height: 4rem;
+    width: 40rem;
+    color: $font-color;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -20rem;
+    @include flex-centered;
+
+    &__span{
+        color: $primary-color;
+        margin: 0 .5rem;
+    }
+}
