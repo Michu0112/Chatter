@@ -1,3 +1,6 @@
+const { Chance } = require("chance");
+import randomItem from 'random-item';
+
 
 const auth = firebase.auth();
 
@@ -24,11 +27,64 @@ auth.onAuthStateChanged( user =>{
         userDeatils.querySelector('.uid').innerHTML += `User Id: ${user.uid}`;
         signedOutView.hidden = true;
         signedInView.hidden = false;
+
+        //add user to firestore uid set
+        getUsers();
+        addUser();
+
     } else{
         signedInView.hidden = true;
         signedOutView.hidden = false;
     }
 })
+
+function getUsers() {
+    const firestore = firebase.firestore();
+        firestore.settings({timestampsInSnapshots: true});
+
+        const col = firestore.collection('uids');
+
+        const query = col;
+
+        query.get().then(snapshot =>{
+            snapshot.docs.forEach(doc =>{
+                console.log(doc.data().uid)
+            })
+        })
+}
+
+function addUser(){
+    const firestore = firebase.firestore();
+
+    auth.onAuthStateChanged( user =>{
+
+        if(user){
+            const uids = firestore.collection('uids').doc('uids');
+            uids.add({
+                uid: user.uid,
+            })
+        }
+
+    })
+}
+
+//generate random Id for chat room
+
+function generateRandomChatId() {
+    return chance.guid();
+}
+
+console.log(generateRandomChatId());
+
+//randomly choose chatter uid
+
+function generateRandomChatterUid() {
+
+    let wordsA = ['apple','green','banana','peach'];
+    return randomItem(wordsA);
+}
+
+console.log(generateRandomChatterUid());
 
 //prevent default
 

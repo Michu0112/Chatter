@@ -5,7 +5,9 @@
   "main": "index.js",
   "dependencies": {
     "bootstrap": "^5.0.0",
-    "core-js": "^3.12.1"
+    "chance": "^1.1.7",
+    "core-js": "^3.12.1",
+    "random-item": "^4.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.0",

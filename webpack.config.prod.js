@@ -5,7 +5,6 @@ module.exports = {
   mode: 'production',
   entry: {
     'Chatter': './src/scripts/index.js',
-    'sendMessage': '/src/scripts/sendMessage.js'
   },
   output: {
     filename: '[name].js',
